@@ -1,0 +1,13 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}{{ book.title }}{% endblock %}
+
+{% block content %}
+    <p>
+    <h2>{{ book.title }}:</h2>
+    <p>{{ book.summary }}</p>
+    <p>ISBN: {{ book.isbn }}</p>
+    <h3>Author:</h3>
+    <p>{{ book.author.authFirstName }} {{ book.author.authLastName }}</p>
+    {#<p>{{ dump(book.author) }}</p>#}
+{% endblock %}
